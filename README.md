@@ -2,4 +2,4 @@
 Practising Git Hub
 trying to learn git
 My name is barney.I want to learn git.
-Understanding the  basic functionalities.
+Understanding brach call.

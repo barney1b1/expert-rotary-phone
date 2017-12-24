@@ -1,0 +1,20 @@
+1.The dataset was taken from Kaggle.
+2.Intital dataset was to big and we were not able to handle it due to our memory constraints so we downsampled the dataset so that we could fit it into our memory requirements.
+3.After preparing the new dataset we did some preprocessing of the data.We removed the stopwords from the body of the questions and the tags which reduced the size of our vocabulary.We applied stemming which reduced the vocabuary size but it reduced the accuarcy of our model so we didn't included it.
+4.After preprocessing the data we extracted the features from the dataset.We picked the top 3000 occuring words in the vocabulary.We used basic word count vector as our featureset where each entry in the vector contains the frequency of that words in the question.
+5.For each question we applied different models to suggest tags on the basis of the body of the question,title of the question and code segment of the question.For this we separated the code-segment from the body of the question.
+6.We implemented a hybrid model consisting of 5 different classifers for predicting tags for a question.
+   Naive Bayes classifer - Predicted on the basis of the body of the question
+   Support Vector Machine classifer - Predicted on the basis of the body of the question
+   Similarity Based classifer - Predicted on the basis of the body of the question
+   Co-occurent Model - Predicted on the basis of the title of the question
+   Code-classifier model - Predicted the programming language tag on the basis of the code-segment in the question
+
+7.Final predicted tag list was obtained on the basis of the most common tags among those which were returned by the individual classifiers. 
+
+7.Because of our memory constraints we were not able to train our model for the complete dataset and hence we were not able to get high accuracy.
+  But keeping in mind the data size that we trained our model on we obtained a decent accuracy.
+
+8.If our model is trained against a good size dataset we are sure it will give high accuracy comparable to previous works done and may be better.
+   
+
